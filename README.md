@@ -34,7 +34,7 @@ git clone https://github.com/hakkache/Advanced-YouTube-Downloader.git
 cd Advanced-YouTube-Downloader
 
 # Run the setup script (installs everything automatically)
-run_app.bat
+scripts\run_app.bat
 ```
 
 ### macOS/Linux
@@ -44,8 +44,21 @@ git clone https://github.com/hakkache/Advanced-YouTube-Downloader.git
 cd Advanced-YouTube-Downloader
 
 # Make setup script executable and run
-chmod +x setup.sh
-./setup.sh
+chmod +x scripts/setup.sh
+./scripts/setup.sh
+```
+
+### Docker (Alternative)
+```bash
+# Clone the repository
+git clone https://github.com/hakkache/Advanced-YouTube-Downloader.git
+cd Advanced-YouTube-Downloader
+
+# Run with Docker Compose
+docker-compose up --build
+
+# Or with scheduler service
+docker-compose --profile scheduler up --build
 ```
 
 ### Manual Installation
@@ -149,18 +162,28 @@ streamlit run app.py
 
 ```
 Advanced-YouTube-Downloader/
-├── app.py                     # Main Streamlit application
-├── scheduler_service.py       # Background scheduler service
-├── requirements.txt           # Python dependencies
-├── run_app.bat               # Windows setup script
-├── setup.sh                  # macOS/Linux setup script
-├── docs/                     # Documentation
-│   ├── USER_GUIDE.md
-│   ├── INSTALLATION.md
-│   ├── API.md
-│   └── CONTRIBUTING.md
-├── downloads/                # Downloaded files (created at runtime)
-└── README.md                # This file
+├── 📱 app.py                        # Main Streamlit application
+├── 🕐 scheduler_service.py          # Background scheduler service
+├── 📋 requirements.txt              # Python dependencies
+├── 🐳 Dockerfile                    # Docker container configuration
+├── 🐳 docker-compose.yml           # Docker Compose setup
+├── ⚙️ pyproject.toml               # Modern Python packaging
+├── 🔧 Makefile                      # Development commands
+├── 📁 scripts/                     # Setup and utility scripts
+│   ├── 🪟 run_app.bat             # Windows setup script
+│   ├── 🐧 setup.sh                # macOS/Linux setup script
+│   ├── 🕐 start_with_scheduler.bat # Windows scheduler startup
+│   └── 📊 quick_status_check.py   # System status checker
+├── 📚 docs/                        # Comprehensive documentation
+│   ├── 👤 USER_GUIDE.md           # Complete user manual
+│   ├── 🔧 INSTALLATION.md         # Installation instructions
+│   ├── 🔌 API.md                  # Developer API reference
+│   └── 🤝 CONTRIBUTING.md         # Contribution guidelines
+├── 🧪 tests/                       # Test suite
+│   ├── 🧪 test_basic.py           # Basic functionality tests
+│   └── 📖 README.md               # Testing guide
+├── 💾 downloads/                   # Downloaded files (created at runtime)
+└── 📖 README.md                   # This file
 ```
 
 ## 🔧 Configuration
@@ -179,6 +202,39 @@ STREAMLIT_PORT=8501
 - **Audio**: Configure default audio options
 - **Organization**: Enable date-based file organization
 - **Scheduler**: Configure background service settings
+
+## 🛠️ Development
+
+### Development Setup
+```bash
+# Clone and setup development environment
+git clone https://github.com/hakkache/Advanced-YouTube-Downloader.git
+cd Advanced-YouTube-Downloader
+
+# Install development dependencies
+pip install -r requirements-dev.txt
+
+# Install pre-commit hooks
+pre-commit install
+
+# Run tests
+make test
+
+# Format code
+make format
+
+# Run all checks
+make check-all
+```
+
+### Available Make Commands
+- `make install` - Install production dependencies
+- `make install-dev` - Install development dependencies
+- `make test` - Run test suite
+- `make lint` - Run code linting
+- `make format` - Format code with Black
+- `make security` - Run security checks
+- `make clean` - Clean up temporary files
 
 ## 🚦 Getting Started - Step by Step
 
