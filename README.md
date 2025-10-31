@@ -9,8 +9,6 @@
 
 **A powerful, user-friendly web application for downloading YouTube videos, playlists, and managing your media collection with advanced scheduling and batch processing capabilities.**
 
-[🚀 Quick Start](#quick-start) • [� Features](#features) • [📚 Documentation](#documentation) • [🤝 Contributing](#contributing) • [🐛 Issues](https://github.com/hakkache/Advanced-YouTube-Downloader/issues)
-
 </div>
 
 ---
@@ -318,9 +316,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Streamlit**: Apache 2.0
 - **FFmpeg**: LGPL 2.1
 
-## 🛡️ Security
-
-Security is important to us. Please review our [Security Policy](SECURITY.md) and report any vulnerabilities responsibly.
 
 ## 🙏 Acknowledgments
 
@@ -337,18 +332,10 @@ Security is important to us. Please review our [Security Policy](SECURITY.md) an
 ![GitHub issues](https://img.shields.io/github/issues/hakkache/Advanced-YouTube-Downloader)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/hakkache/Advanced-YouTube-Downloader)
 
-## 📞 Support
-
-- **Documentation**: Start with the [User Guide](docs/USER_GUIDE.md)
-- **Issues**: [GitHub Issues](https://github.com/hakkache/Advanced-YouTube-Downloader/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/hakkache/Advanced-YouTube-Downloader/discussions)
-- **Email**: [Contact the maintainers](mailto:contact@example.com)
-
 ---
 
 <div align="center">
 
-**Made with ❤️ for the YouTube downloading community**
 
 [⭐ Star this repo](https://github.com/hakkache/Advanced-YouTube-Downloader) • [🐛 Report Bug](https://github.com/hakkache/Advanced-YouTube-Downloader/issues) • [💡 Request Feature](https://github.com/hakkache/Advanced-YouTube-Downloader/issues)
 
