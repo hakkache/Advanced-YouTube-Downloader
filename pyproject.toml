@@ -1,0 +1,139 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "advanced-youtube-downloader"
+version = "3.0.0"
+description = "A powerful, user-friendly web application for downloading YouTube videos"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "hakkache", email = "your-email@example.com"},
+]
+keywords = [
+    "youtube",
+    "downloader", 
+    "video",
+    "playlist",
+    "streamlit",
+    "scheduler"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "streamlit>=1.28.0",
+    "yt-dlp>=2023.7.6",
+    "ffmpeg-python>=0.2.0",
+    "schedule>=1.2.0",
+    "streamlit-calendar>=0.7.0",
+    "streamlit-datetime-picker>=0.0.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=22.0.0",
+    "flake8>=5.0.0",
+    "bandit[toml]>=1.7.0",
+    "safety>=2.0.0",
+    "pip-tools>=6.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/hakkache/Advanced-YouTube-Downloader"
+Documentation = "https://github.com/hakkache/Advanced-YouTube-Downloader/tree/main/docs"
+Repository = "https://github.com/hakkache/Advanced-YouTube-Downloader.git"
+"Bug Reports" = "https://github.com/hakkache/Advanced-YouTube-Downloader/issues"
+
+[project.scripts]
+youtube-downloader = "app:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests*", "venv*", "__pycache__*", "downloads*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | downloads
+  | test_downloads
+)/
+'''
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+addopts = [
+    "--verbose",
+    "--tb=short",
+    "--strict-markers",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+]
+
+[tool.coverage.run]
+source = ["."]
+omit = [
+    "venv/*",
+    "tests/*",
+    "setup.py",
+    "scripts/*",
+    "__pycache__/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+
+[tool.bandit]
+exclude_dirs = ["tests", "venv", "downloads", "test_downloads"]
+skips = ["B101", "B601"]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 100
+known_first_party = ["app", "scheduler_service"]

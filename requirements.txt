@@ -1,6 +1,11 @@
-streamlit
-yt-dlp
-ffmpeg-python
-schedule
-streamlit-calendar
-streamlit-datetime-picker
+# Core dependencies for Advanced YouTube Downloader
+streamlit>=1.28.0,<2.0.0
+yt-dlp>=2023.7.6
+ffmpeg-python>=0.2.0,<1.0.0
+schedule>=1.2.0,<2.0.0
+streamlit-calendar>=0.7.0,<1.0.0
+streamlit-datetime-picker>=0.0.2,<1.0.0
+
+# Additional utilities
+requests>=2.28.0,<3.0.0
+urllib3>=1.26.0,<2.0.0

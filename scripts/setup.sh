@@ -5,6 +5,9 @@
 
 echo "🚀 Setting up Advanced YouTube Downloader..."
 
+# Navigate to parent directory to find requirements.txt
+cd "$(dirname "$0")/.."
+
 # Function to check if command exists
 command_exists() {
     command -v "$1" >/dev/null 2>&1
@@ -12,14 +15,14 @@ command_exists() {
 
 # Check if Python is installed
 if ! command_exists python3; then
-    echo "❌ Python 3 is not installed. Please install Python 3.7 or higher."
+    echo "❌ Python 3 is not installed. Please install Python 3.8 or higher."
     echo "Visit: https://python.org/downloads/"
     exit 1
 fi
 
 # Check Python version
 PYTHON_VERSION=$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
-MIN_VERSION="3.7"
+MIN_VERSION="3.8"
 
 if [ "$(printf '%s\n' "$MIN_VERSION" "$PYTHON_VERSION" | sort -V | head -n1)" != "$MIN_VERSION" ]; then
     echo "❌ Python $PYTHON_VERSION is installed, but Python $MIN_VERSION or higher is required."
@@ -64,6 +67,8 @@ pip install -r requirements.txt --quiet
 
 if [ $? -ne 0 ]; then
     echo "❌ Failed to install requirements"
+    echo "Trying again with verbose output..."
+    pip install -r requirements.txt
     exit 1
 fi
 
