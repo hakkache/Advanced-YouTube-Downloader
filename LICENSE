@@ -1,0 +1,109 @@
+MIT License
+
+Copyright (c) 2024 Advanced YouTube Downloader
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Third-Party Licenses
+
+This project uses several third-party libraries and tools. Below are their respective licenses:
+
+### yt-dlp
+- **License**: The Unlicense
+- **Website**: https://github.com/yt-dlp/yt-dlp
+- **Usage**: Core video downloading functionality
+
+### Streamlit
+- **License**: Apache License 2.0
+- **Website**: https://github.com/streamlit/streamlit
+- **Usage**: Web application framework
+
+### FFmpeg
+- **License**: GNU Lesser General Public License (LGPL) version 2.1
+- **Website**: https://ffmpeg.org/
+- **Usage**: Video processing and conversion (via ffmpeg-python)
+
+### schedule
+- **License**: MIT License
+- **Website**: https://github.com/dbader/schedule
+- **Usage**: Task scheduling functionality
+
+### streamlit-calendar
+- **License**: MIT License
+- **Website**: https://github.com/im-perativa/streamlit-calendar
+- **Usage**: Calendar widget for scheduler
+
+### streamlit-datetime-picker
+- **License**: MIT License
+- **Website**: https://github.com/null-none/streamlit-datetime-picker
+- **Usage**: DateTime picker widget
+
+---
+
+## License Compatibility
+
+All third-party libraries used in this project have licenses that are compatible with the MIT License. Users and contributors should be aware of the following:
+
+1. **FFmpeg**: Uses LGPL license, which allows linking with MIT-licensed code
+2. **All other dependencies**: Use MIT or Apache 2.0 licenses, fully compatible with MIT
+
+## Disclaimer
+
+This software is provided for educational and personal use only. Users are responsible for:
+
+1. **Compliance with YouTube's Terms of Service**: Ensure your use complies with YouTube's current terms
+2. **Copyright Respect**: Only download content you have permission to download
+3. **Legal Compliance**: Follow all applicable local, national, and international laws
+4. **Fair Use**: Respect content creators' rights and use downloads appropriately
+
+The developers of this software do not encourage or condone:
+- Copyright infringement
+- Violation of platform terms of service
+- Commercial use of downloaded content without proper licensing
+- Distribution of copyrighted material without permission
+
+## Attribution
+
+If you use this software in your projects, attribution is appreciated but not required under the MIT License. If you choose to provide attribution, you may use:
+
+"Powered by Advanced YouTube Downloader - https://github.com/hakkache/Advanced-YouTube-Downloader"
+
+## Contributing
+
+By contributing to this project, you agree that your contributions will be licensed under the same MIT License that covers the project.
+
+## Support
+
+This software is provided "as is" without warranty. For support, please:
+1. Check the documentation
+2. Search existing GitHub issues
+3. Create a new issue if your problem isn't already addressed
+
+## Commercial Use
+
+The MIT License permits commercial use of this software. However, users must ensure:
+- Compliance with all applicable laws and regulations
+- Respect for third-party terms of service
+- Proper licensing for any commercial content downloaded
+
+## Updates to License
+
+Any future changes to the license will be clearly communicated and will not affect previously downloaded versions of the software.
